@@ -1,0 +1,9 @@
+services:
+  login-automation:
+    build:
+      context: .
+    network_mode: "host"
+    volumes:
+      - ./login-automation-files:/app/login-automation-files # Bind mount for easy updates
+      - ./cookies:/app/cookies
+    restart: always
